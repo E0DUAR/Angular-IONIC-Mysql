@@ -1,0 +1,11 @@
+Rutas
+https://www.youtube.com/watch?v=rLsrCG1D0ZE&ab_channel=StevenBedoya
+
+Ionic select insert a base de datos MySQL usando Php
+https://www.youtube.com/watch?v=MP3QglvNMq8&ab_channel=StevenBedoya
+
+Ionic delete MySql
+https://www.youtube.com/watch?v=Vb5XgTRBZ64&ab_channel=StevenBedoya
+
+Ionic edit MySql
+https://www.youtube.com/watch?v=COKpZKDZRaQ&ab_channel=StevenBedoya

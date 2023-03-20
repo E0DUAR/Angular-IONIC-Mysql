@@ -1,0 +1,7 @@
+{
+  "name": "Angular-IONIC-Mysql",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
