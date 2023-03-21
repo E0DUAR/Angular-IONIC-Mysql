@@ -9,3 +9,6 @@ https://www.youtube.com/watch?v=Vb5XgTRBZ64&ab_channel=StevenBedoya
 
 Ionic edit MySql
 https://www.youtube.com/watch?v=COKpZKDZRaQ&ab_channel=StevenBedoya
+
+#CORRER PROYECTO
+ionic serve
