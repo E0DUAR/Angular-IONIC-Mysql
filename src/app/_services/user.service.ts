@@ -5,5 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
+  id:string='';
+
   constructor() { }
+
+  setId(id:string){
+    this.id = id;
+  }
+
+  getId(){
+    return this.id;
+  }
 }
