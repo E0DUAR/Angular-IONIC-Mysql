@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
       Estudiantes
@@ -6,35 +6,47 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
+<ion-content class="ion-padding">
   <ion-grid>
 
     <ion-row class="ion-text-center ion-padding-bottom">
-      <ion-col size="4" class="ion-text-wrap">
+      <ion-col size-md="3">
         <b>Nombre</b>
       </ion-col>
-      <ion-col size="4" class="ion-text-wrap">
+      <ion-col size-md="3">
         <b>Correo</b>
       </ion-col>
-      <ion-col size="4" class="ion-text-wrap">
+      <ion-col size-md="3">
         <b>Universidad</b>
+      </ion-col>
+      <ion-col size-md="3">
+        <b>Eliminar</b>
+      </ion-col>
+      <ion-col size-md="3">
+        <b>Editar</b>
       </ion-col>
     </ion-row>
 
-    <ion-row wrap *ngFor="let item of listado; let index = index" class="ion-text-center ion-padding-vertical">
-      <ion-col size="4" class="ion-text-wrap">
+    <ion-row wrap *ngFor="let item of listado; let index = index" class="ion-padding-vertical">
+      <ion-col size-md="3" class="ion-text-wrap">
         <p>{{item.nombre}}</p>
       </ion-col>
-      <ion-col size="4" class="ion-text-wrap">
+      <ion-col size-md="3" class="ion-text-wrap">
         <p>{{item.correo}}</p>
       </ion-col>
-      <ion-col size="4" class="ion-text-wrap">
+      <ion-col size-md="3" class="ion-text-wrap">
         <p>{{item.universidad}}</p>
+      </ion-col>
+      <ion-col size-md="3" class="ion-text-wrap">
+        <ion-button expand="block" (click)="eliminar(item.id)">Eliminar</ion-button>
+      </ion-col>
+      <ion-col size-md="3" class="ion-text-wrap">
+        <ion-button expand="block" routerLink="/form" routerDirection="forward" (click)="eliminar(item.id)">Editar</ion-button>
       </ion-col>
     </ion-row>
 
   </ion-grid>
 
-  <ion-button expand="block" routerLink="/form" class="ion-margin-top">Agregar</ion-button>
+  <ion-button expand="block" routerLink="/form" class="ion-margin-top" size="large">Agregar</ion-button>
 
 </ion-content>
