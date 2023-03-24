@@ -1,10 +1,67 @@
-create table universitarios (
-    id integer(3) primary key auto_increment,
-    nombre character(50),
-    correo character(50),
-    universidad character(50)
-)
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 24, 2023 at 08:13 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
-INSERT INTO `universitarios` (`id`, `nombre`, `correo`, `universidad`) 
-VALUES (NULL, 'Juan', 'juan@gmail.com', 'Institución universitaria Atonio José Camacho'), 
-       (NULL, 'Pedro', 'pedro@gmail.com', 'Universidad Autonoma de Occidente');
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `estudiantes`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `universitarios`
+--
+
+CREATE TABLE `universitarios` (
+  `id` int(3) NOT NULL,
+  `nombre` char(50) DEFAULT NULL,
+  `correo` char(50) DEFAULT NULL,
+  `universidad` char(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `universitarios`
+--
+
+INSERT INTO `universitarios` (`id`, `nombre`, `correo`, `universidad`) VALUES
+(10, 'diego', 'dieg@gmail.com', 'uao');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `universitarios`
+--
+ALTER TABLE `universitarios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `universitarios`
+--
+ALTER TABLE `universitarios`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
