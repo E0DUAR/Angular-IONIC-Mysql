@@ -31,9 +31,12 @@ export class HomePage {
     this.ngOnInit();
   }
 
-  editar(id:string)
+  editar(id:string, nombre:string, correo:string, universidad:string)
   {
     this.user.setId(id);
+    this.user.setNombre(nombre);
+    this.user.setCorreo(correo);
+    this.user.setUniversidad(universidad);
   }
 
 

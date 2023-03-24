@@ -11,27 +11,50 @@ import { UserService } from '../_services/user.service';
 })
 export class EditarPage implements OnInit {
 
-  id:string='';
+  
   
   datos:any={
+    id:'',
     nombre:'',
     correo:'',
     universidad:''
   }
 
   constructor(private http:HttpClient, private user:UserService) { 
-    this.id=user.getId();
+    this.datos.id=user.getId();
+    this.datos.nombre=user.getNombre();
+    this.datos.correo=user.getCorreo();
+    this.datos.universidad=user.getUniversidad();
   }
 
   ngOnInit() {
 
   }
 
-  editar(){
-    this.http.get('http://localhost/proyectos/crud-php-to-webservice/editar.php?id='+this.datos.id+'&nombre='+this.datos.nombre+'&correo='+this.datos.correo+'&universidad='+this.datos.universidad).subscribe((snap) => {
+  /**editar(){
+    this.http.get('http://localhost/proyectos/crud-php-to-webservice/editar.php?id='+this.id+'&nombre='+this.datos.nombre+'&correo='+this.datos.correo+'&universidad='+this.datos.universidad).subscribe((snap) => {
       console.log(snap);
     });
+  } */
+
+
+
+  editar() {
+    const url = `http://localhost/proyectos/crud-php-to-webservice/editar.php?id=${this.datos.id}&nombre=${this.datos.nombre}&correo=${this.datos.correo}&universidad=${this.datos.universidad}`;
+  
+    this.http.get(url).subscribe({
+      next: (response) => {
+        console.log(response);
+        //RECARGAR PÁGINA PRINCIPAL DESPUÉS DE EDITAR UN REGISTRO
+        window.location.reload();
+      },
+      error: (error) => {
+        console.error(error);
+      }
+    });
   }
+  
+  
+  
 
 }
-
