@@ -31,11 +31,7 @@ export class EditarPage implements OnInit {
 
   }
 
-  /**editar(){
-    this.http.get('http://localhost/proyectos/crud-php-to-webservice/editar.php?id='+this.id+'&nombre='+this.datos.nombre+'&correo='+this.datos.correo+'&universidad='+this.datos.universidad).subscribe((snap) => {
-      console.log(snap);
-    });
-  } */
+
 
 
 

@@ -24,7 +24,7 @@ export class FormPage implements OnInit {
   save(){
     this.http.get('http://localhost/proyectos/crud-php-to-webservice/guardar.php?nombre='+this.datos.nombre+'&correo='+this.datos.correo+'&universidad='+this.datos.universidad+'').subscribe((snap) => {
       console.log(snap);
-
+      window.location.reload();
     });
   }
 
